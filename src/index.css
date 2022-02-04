@@ -1,13 +1,39 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+Tamma+2:wght@800&display=swap");
+:root {
+  --poppins_font: "Poppins", sans-serif;
+  --logo-font: "Baloo Tamma 2", cursive;
+  --bg-color: hsl(0, 0%, 1%);
+  --blue: hsl(203, 100%, 50%);
+  --gay-gradient: linear-gradient(
+    to right,
+    hsl(228, 100%, 30%),
+    hsl(177, 70%, 50%)
+  );
+  --error-red: hsl(12, 80%, 50%);
+}
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  position: relative;
+  background-color: var(--bg-color);
+  font-family: var(--poppins_font);
+  color: hsl(0, 0%, 90%);
+}
+main {
+  height: 91vh;
+  margin: 20;
+  padding: 20;
+  min-width: "fit-content";
+}
+
+.sections {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  justify-content: space-between;
+  grid-auto-flow: column;
 }

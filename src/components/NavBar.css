@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: clamp(1rem, 3vmin, 2rem);
+  background-color: var(--bg-color);
+  transition: flex-direction 12s ease-in-out;
+  z-index: 100;
+  text-transform: capitalize;
+}
+nav > section {
+  color: hsl(203, 100%, 50%);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
+  nav > section + section {
+    margin-top: 5px;
+  }
+}
