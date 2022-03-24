@@ -52,9 +52,18 @@ export default function Stats({ setComponentNo }) {
     );
   else
     return (
-      <div className='centre'>
-        <h1>OOPs no order Found</h1>
-        Try Ordering First
-      </div>
+      <>
+        <button
+          onClick={() => {
+            setComponentNo(0);
+          }}
+          className='GHOST'>
+          BACK
+        </button>
+        <div className='centre'>
+          <h1>OOPs no order Found</h1>
+          Try Ordering First
+        </div>
+      </>
     );
 }

@@ -21,6 +21,7 @@ function EmployeeHome() {
         setUserProfile(res.data);
       })
       .catch((error) => {
+        console.log(error);
         if (error.response.status === 403) navigate("/Login");
       });
   }, [navigate, token]);
@@ -28,7 +29,7 @@ function EmployeeHome() {
     <div>
       <NavBar />
       <h1 className='centre'>
-        Welcome, {UserProfile?.fname} {UserProfile?.mname} {UserProfile?.lname}
+        Welcome {UserProfile?.fname} {UserProfile?.mname} {UserProfile?.lname}
       </h1>
       {componentNo === 0 && (
         <div className='centre' style={{ margin: 10, padding: 20 }}>

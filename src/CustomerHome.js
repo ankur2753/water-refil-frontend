@@ -70,13 +70,13 @@ export default function CustomerHome() {
                 fill='white'
               />
             </svg>
-            <label htmlFor='Organization'>
-              Please Select the Organization to Order From
+            <label htmlFor='employee'>
+              Please Select the employee to Order From
             </label>
             <select
-              placeholder='Select any Organization'
+              placeholder='Select any employee'
               className='big'
-              name='Organization'
+              name='employee'
               defaultValue={"DEFAULT"}
               value={OptionVal}
               onChange={(e) => setOptionVal(e.target.value)}

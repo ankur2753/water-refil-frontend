@@ -18,8 +18,7 @@ export default function Login() {
         if (res.data.token) {
           setToken(res.data);
           navigate("/Home");
-        }
-        if (!res.data.token) {
+        } else {
           setWrongAuth(true);
         }
       })

@@ -101,19 +101,20 @@ const Deliveries = ({ setComponentNo }) => {
           Completed
         </div>
       </div>
-      {deliveries
-        .filter((bruh) => bruh.isCompleted ^ Completed)
-        .map((del) => (
-          <DeliveryCard
-            key={del.id}
-            customerID={del.customerID}
-            isCompleted={del.isCompleted}
-            handleComplition={handleComplition}
-            deliveryID={del.id}
-            containerID={del.containerID}
-          />
-        ))}
-      ;
+      {deliveries.length > 0 &&
+        deliveries
+          .filter((bruh) => bruh.isCompleted ^ Completed)
+          .map((del) => (
+            <DeliveryCard
+              key={del.id}
+              customerID={del.customerID}
+              isCompleted={del.isCompleted}
+              handleComplition={handleComplition}
+              deliveryID={del.id}
+              containerID={del.containerID}
+            />
+          ))}
+      {deliveries.length < 0 && <h3>No deliveries to see here</h3>}
     </>
   );
 };
